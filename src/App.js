@@ -27,33 +27,32 @@ class App extends React.Component {
 
   render () {
     const { isLoading, movies } = this.state;
+    const loading = isLoading ?
+      <div className="loader">
+        <div className="loader__text">
+          <img src="/loading.gif" alt="loading" title="loading"/>
+        </div>
+      </div>
+      : '';
     return (
       <section className="container">
-        {isLoading ? (
-          <div className="loader">
-            <div className="loader__text">
-              <img src="./assets/loading.gif" alt="loading" title="loading"/>
-            </div>
-          </div>
-        )
-        : (
-          <div className="movies">
-          {movies.map((movie) => {
-            console.log(movie);
-            return ( 
-              <Movie
-                key={movie.id}
-                id={movie.id}
-                year={movie.year}
-                title={movie.title}
-                summary={movie.summary}
-                poster={movie.medium_cover_image}
-                genres={movie.genres}
-              />
-            );
-          })}
-          </div>
-        )}
+        {loading}
+        <div className="movies">
+        {movies.map((movie) => {
+          console.log(movie);
+          return ( 
+            <Movie
+              key={movie.id}
+              id={movie.id}
+              year={movie.year}
+              title={movie.title}
+              summary={movie.summary}
+              poster={movie.medium_cover_image}
+              genres={movie.genres}
+            />
+          );
+        })}
+        </div>
       </section>
     ) 
   }
