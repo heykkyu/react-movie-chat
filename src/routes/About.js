@@ -1,13 +1,13 @@
 import React from 'react';
 import './About.scss';
 
-function About() {
+function About(props) {
   return (
     <div className="about__container">
       <span>
-        "Freedom is the freedom to say~~~~"
+        "React is not pretty much different with Vue.js"
       </span>
-      <span>- George Orwell, 1984</span>
+      <span>- JK Kim, 1991</span>
     </div>
   )
 }
