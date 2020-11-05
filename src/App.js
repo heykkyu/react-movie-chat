@@ -9,10 +9,14 @@ import Detail from './routes/Detail';
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Route path="/" exact={true} component={Home} />
-      <Route path="/about" exact={true} component={About} />
-      <Route path="/movie-detail" exact={true} component={Detail} />
+      <div className="app__container">
+        <Navigation />
+        <div className="app__inner">
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/about" exact={true} component={About} />
+          <Route path="/movie-detail" exact={true} component={Detail} />
+        </div>
+      </div>
     </Router>
   )
 }
