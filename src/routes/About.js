@@ -5,9 +5,9 @@ function About(props) {
   return (
     <div className="about__container">
       <span>
-        "React is not pretty much different with Vue.js"
+        "React is not pretty much different with other frameworks/libraries"
       </span>
-      <span>- JK Kim, 1991</span>
+      <span>- JK Kim</span>
     </div>
   )
 }

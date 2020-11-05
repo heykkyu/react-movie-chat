@@ -1,6 +1,7 @@
 .movie__wrapper {
   width: 80%;
-  margin: 100px 0 0 150px;
+  margin: 100px auto;
+  animation: fadein 2s ease-in;
   .movie {
     background-color: #fff;
     margin-bottom: 70px;
@@ -53,3 +54,4 @@
     }
   }
 }
+

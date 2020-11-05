@@ -1,0 +1,15 @@
+.chat {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 60px;
+  height: auto;
+  img {
+    width: inherit;
+    height: inherit;
+  }
+  &:hover {
+    opacity: .8;
+    cursor: pointer;
+  }
+}

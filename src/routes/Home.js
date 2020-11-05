@@ -7,7 +7,6 @@ class Home extends React.Component {
   state = {
     isLoading: true,
     movies: [],
-    naver: []
   };
 
   getMovies = async () => {
@@ -20,27 +19,11 @@ class Home extends React.Component {
     this.setState({ movies, isLoading: false });
   }
 
-  getNaverMovies = async () => {
-    const config = {
-      headers: {
-        'X-Naver-Client-Id': 'kLeil_DjkJr9R_PwXo0f',
-        'X-Naver-Client-Secret': 'HvjkFKOTeW'
-      }
-    }
-    const {
-      data : {
-        data: { naver },
-      },
-    } = await axios.get('https://openapi.naver.com/v1/search/movie.xml?query=%EC%A3%BC%EC%8B%9D&display=10&start=1&genre=1', config);
-    console.log('네이버', naver)
-  }
-
   componentDidMount() {
     // Redux 넣기
-    // if (this.state.movies.length === 0 ) {
+    if (this.state.movies.length === 0 ) {
       this.getMovies();
-      this.getNaverMovies();
-    // }
+    }
   }
 
   render () {

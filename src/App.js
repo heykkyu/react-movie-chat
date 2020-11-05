@@ -5,6 +5,7 @@ import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
 import Detail from './routes/Detail';
+import Chat from './components/Chat';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact={true} component={Home} />
           <Route path="/about" exact={true} component={About} />
           <Route path="/movie-detail" exact={true} component={Detail} />
+          <Chat></Chat>
         </div>
       </div>
     </Router>
