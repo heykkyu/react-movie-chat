@@ -31,7 +31,7 @@ class Home extends React.Component {
       data : {
         data: { naver },
       },
-    } = await axios.get('https://openapi.naver.com/v1/search/movie.xml', config);
+    } = await axios.get('https://openapi.naver.com/v1/search/movie.xml?query=%EC%A3%BC%EC%8B%9D&display=10&start=1&genre=1', config);
     console.log('네이버', naver)
   }
 
